@@ -4,3 +4,11 @@
 
 для расчета суммы можно воспользоваться функцией sum
 """
+
+
+def calc_sum(*args):
+    return sum(args)
+
+
+if __name__ == "__main__":
+    print(calc_sum(10, 20, 30))
