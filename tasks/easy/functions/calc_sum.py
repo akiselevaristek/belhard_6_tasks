@@ -11,4 +11,4 @@ def calc_sum(*args):
 
 
 if __name__ == "__main__":
-    print(calc_sum(10, 20, 30))
+    print(calc_sum(123, 213, 34, 54))

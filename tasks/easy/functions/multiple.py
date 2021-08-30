@@ -7,7 +7,6 @@
 def multiply(n):
     def closure(x):
         return n * x
-
     return closure
 
 

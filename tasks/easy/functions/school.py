@@ -22,3 +22,79 @@ school_data = {
 }
 
 
+def incr_students(data, cls):
+    data[cls] = data.get(cls) + 1
+
+    return data
+
+
+def decr_students(data, cls):
+    if data[cls] >= 0:
+        data[cls] = data.get(cls) - 1
+
+    return data
+
+
+def add_class(data, cls):
+    data.update({cls: 0})
+
+
+def remove_class(data, cls):
+    del data[cls]
+
+
+def calc_students(data):
+    return print(sum(data.values()))
+
+
+if __name__ == '__main__':
+    print(school_data)
+    incr_students(school_data, '1a')
+    print(school_data)
+    decr_students(school_data, '1a')
+    print(school_data)
+    add_class(school_data, '7z')
+    print(school_data)
+    remove_class(school_data, '2b')
+    print(school_data)
+    calc_students(school_data)
+
+
+
+
+
+
+
+#
+#
+# def incr_students(exp1: dict, exp2):
+#     exp1[exp2] = exp1.get(exp2) + 1
+#
+#
+# def decr_students(exp1: dict, exp2):
+#     if exp1.get(exp2) > 0:
+#         exp1[exp2] = exp1.get(exp2) - 1
+#     else:
+#         print("Количество учеников в классе должно быть больше 0")
+#
+#
+# def add_class(exp1: dict, exp2):
+#     exp1.update({exp2: 0})
+#
+#
+# def remove_class(exp1: dict, exp2):
+#     del exp1[exp2]
+#
+#
+# def calc_students(exp1: dict):
+#     return print(sum(exp1.values()))
+#
+#
+# if __name__ == '__main__':
+#     print(school_data)
+#     incr_students(school_data, '1a')
+#     decr_students(school_data, '1b')
+#     add_class(school_data, '3a')
+#     remove_class(school_data, '2a')
+#     calc_students(school_data)
+#     print(school_data)

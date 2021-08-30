@@ -15,12 +15,11 @@ next(fibonacci_gen) -> 8
 
 
 def fibonacci():
-    current_value = 1
-    prew_value = 1
+    a = 1
+    b = 1
     while True:
-        yield current_value
-        current_value, prew_value = prew_value, current_value + prew_value
-
+        yield a
+        a, b = b, a + b
 
 
 if __name__ == "__main__":

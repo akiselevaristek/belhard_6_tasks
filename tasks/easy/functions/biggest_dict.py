@@ -13,11 +13,10 @@ def biggest_dict(d=None, **kwargs):
         d.update(kwargs)
         result = d
     else:
-        new = kwargs
-        result = new
+        result = dict(kwargs)
     return result
 
 
 if __name__ == "__main__":
-    d = 123
-    print(biggest_dict(d, key1=1, key2=2))
+    dict_my = {1: 2}
+    print(biggest_dict(dict_my, key1='dscf', key2=2))

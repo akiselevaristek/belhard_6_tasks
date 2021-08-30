@@ -20,6 +20,7 @@ next(tn_gen) -> 15
 next(tn_gen) -> 21
 """
 
+
 def triangular_numbers():
     current_value = 1
     tn = 2
