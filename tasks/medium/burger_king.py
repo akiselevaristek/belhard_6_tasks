@@ -41,27 +41,60 @@
 
 
 def bread(func):
-     def wrapper():
-         print()
-         func()
-         print("<\______/>")
-     return wrapper
+    def wrapper():
+        print("</------------\\>")
+        func()
+        print("<\\____________/>")
+
+    return wrapper
 
 
-def ingredients(func):
-     def wrapper():
-         print("#помидоры#")
-         func()
-         print("~салат~")
-     return wrapper
+def tomato(func):
+    def wrapper():
+        print("*** помидоры ****")
+        func()
+
+    return wrapper
 
 
-def sandwich(food="--ветчина--"):
-     print(food)
+def salad(func):
+    def wrapper():
+        print("~~~~ салат ~~~~~")
+        func()
+
+    return wrapper
 
 
-sandwich()
+def cheese(func):
+    def wrapper():
+        print("^^^^^ сыр ^^^^^^")
+        func()
+
+    return wrapper
 
 
-sandwich = bread(ingredients(sandwich))
-sandwich()
+def onion(func):
+    def wrapper():
+        print("----- лук ------")
+        func()
+
+    return wrapper
+
+@bread
+@onion
+@tomato
+def beef():
+    print("### говядина ###")
+
+@bread
+@cheese
+@salad
+def chicken():
+    print("|||| курица ||||")
+
+
+if __name__ == "__main__":
+    beef()
+    chicken()
+
+

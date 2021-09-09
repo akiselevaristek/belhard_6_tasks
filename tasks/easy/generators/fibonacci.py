@@ -31,3 +31,4 @@ if __name__ == "__main__":
     print(f'next(fibonacci_gen) -> {next(fibonacci_gen)}')
     print(f'next(fibonacci_gen) -> {next(fibonacci_gen)}')
     print(f'next(fibonacci_gen) -> {next(fibonacci_gen)}')
+

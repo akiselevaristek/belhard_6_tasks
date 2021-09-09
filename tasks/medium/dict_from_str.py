@@ -11,4 +11,15 @@
     ...
 }
 """
+from collections import Counter
+
 STR_VAL = 'python is the fastest-growing major programming language'
+
+
+def dict_from_str(my_str: str):
+    result = Counter(my_str)
+    return result
+
+
+if __name__ == "__main__":
+    print(dict_from_str(STR_VAL))

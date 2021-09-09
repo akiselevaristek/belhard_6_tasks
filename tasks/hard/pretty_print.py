@@ -15,3 +15,16 @@ data = {'a': 123, 123: [1, 2, 3], 'asd': {'c': 654.54}}
     },
 }
 """
+from print_dict import pd
+
+
+def pretty_print(data):
+    pd(data)
+
+
+
+if __name__ == "__main__":
+    x = {'a': 123, 123: [1, 2, 3], 'asd': {'c': 654.54}}
+    pretty_print(x)
+
+

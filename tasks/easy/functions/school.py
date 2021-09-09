@@ -25,14 +25,10 @@ school_data = {
 def incr_students(data, cls):
     data[cls] = data.get(cls) + 1
 
-    return data
-
 
 def decr_students(data, cls):
     if data[cls] >= 0:
         data[cls] = data.get(cls) - 1
-
-    return data
 
 
 def add_class(data, cls):
@@ -44,20 +40,15 @@ def remove_class(data, cls):
 
 
 def calc_students(data):
-    return print(sum(data.values()))
+    return sum(data.values())
 
 
 if __name__ == '__main__':
-    print(school_data)
     incr_students(school_data, '1a')
-    print(school_data)
     decr_students(school_data, '1a')
-    print(school_data)
     add_class(school_data, '7z')
-    print(school_data)
     remove_class(school_data, '2b')
-    print(school_data)
-    calc_students(school_data)
+    print(calc_students(school_data))
 
 
 
