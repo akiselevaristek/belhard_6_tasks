@@ -13,8 +13,23 @@ fibonacci(5)
 3
 5
 8
-Traceback (most recent call last):
-File «C:/Python/Python3/python_generator.py», line 29, in
-print(next(fib))
-StopIteration
 """
+n = int(input("Введите n: "))
+
+
+def fibonacci(num_count: int):
+    a = b = 1
+    if num_count <= 1:
+        print('Введите значение больше 1')
+    else:
+        for i in range(0, num_count):
+            a, b = b, a + b
+            print(a)
+
+
+
+if __name__ == "__main__":
+    fibonacci(n)
+
+
+
